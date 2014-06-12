@@ -8,12 +8,110 @@
 
 <meta charset="utf-8" />
 
+<meta name="format-detection" content="telephone=no" />
 
 <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 
-<font style="font-size:30px">
+
+
 
 <title>j00-everything-but-the-kitchen-sink-pgb-helloworld </title>
+
+
+<script type="text/javascript" src="phonegap.js"></script>  
+<!-- keep this since plugins need it -->
+
+
+<script type="text/javascript">
+
+
+window.onload = function(){
+ 
+ 
+ 
+ // first send the standard check to see if the device is ready
+ document.addEventListener('deviceready', onDeviceReady, false);
+ 
+ 
+ 
+
+//Global Variables
+document.myStartDist = 0
+document.myScale = 1.1
+document.myOnlyZoomLarger = 'false'    // if true page only can zoom larger, false allows page to shrink 
+
+document.getElementById('myDiv1').style.WebkitTransformOrigin = '0px 0px';
+
+
+
+
+// basic touch events
+
+
+ myBodyId.ontouchstart = function(event){
+    myFinger0 = event.touches[0]
+    myFinger1 = event.touches[1]
+    document.myStartDist = parseInt(myFinger0.clientX)  - parseInt(myFinger1.clientX)    
+ }
+
+
+
+  myBodyId.ontouchmove = function(event){
+   
+   if (event.touches.length == 2){     // check if only two fingers on the device
+    
+    myFinger0 = event.touches[0]
+    myFinger1 = event.touches[1]
+    myNewWidth = parseInt(myFinger0.clientX) - parseInt(myFinger1.clientX)   
+    myChangeX =  myNewWidth / document.myStartDist  
+    document.myScale = myChangeX
+    
+    
+    
+    // the following is less confusing than normal javascript if statements
+    
+    if (document.myOnlyZoomLarger == 'false'){
+      if (document.myScale < 0.05){    // so web page does not fully disapear
+          document.myScale = 0.05
+      } 
+      document.getElementById('myDiv1').style.webkitTransform = 'scale('+document.myScale+')';
+    }  
+    
+    
+    if (document.myOnlyZoomLarger == 'true'){
+      if (document.myScale < 1){    //  resets webpage to original size
+          document.myScale = 1.0
+          document.getElementById('myDiv1').style.webkitTransform = 'scale(1.0)';
+      } else {
+        document.getElementById('myDiv1').style.webkitTransform = 'scale('+document.myScale+')';
+      }
+    }
+          
+        
+
+   } // end touches   
+    
+  }  // end ontouchmove
+
+
+
+}  // end window.load
+
+
+function onDeviceReady() {
+     document.getElementById('myFeedbackDiv').innerHTML ='Your device is now ready to use';  
+}
+
+
+</script>
+
+<title>j00-everything-but-the-kitchen-sink-pgb-helloworld </title>
+
+</head>
+
+<font style="font-size:30px">
+
+
 
 
 <script type="text/javascript" src="phonegap.js"></script>  
