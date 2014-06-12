@@ -1,44 +1,17 @@
-
-
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 
 <html>
-
 <head>
-
-<meta charset="utf-8" />
-
-<meta name="format-detection" content="telephone=no" />
-
-<meta name="viewport" content="user-scalable=no, initial-scale=2, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-
-
-
-
-<title> pgb-jer </title>
-
-
-<script type="text/javascript" src="phonegap.js"></script>  
-<!-- keep this since plugins need it -->
-
 
 <script type="text/javascript">
 
 
 window.onload = function(){
- 
- 
- 
- // first send the standard check to see if the device is ready
- document.addEventListener('deviceready', onDeviceReady, false);
- 
- 
- 
 
 //Global Variables
 document.myStartDist = 0
 document.myScale = 1.1
-document.myOnlyZoomLarger = 'false'    // if true page only can zoom larger, false allows page to shrink 
+document.myOnlyZoomLarger = 'true'    // if true page only can zoom larger, false allows page to shrink 
 
 document.getElementById('myDiv1').style.WebkitTransformOrigin = '0px 0px';
 
@@ -71,8 +44,8 @@ document.getElementById('myDiv1').style.WebkitTransformOrigin = '0px 0px';
     // the following is less confusing than normal javascript if statements
     
     if (document.myOnlyZoomLarger == 'false'){
-      if (document.myScale < 0.2){    // so web page does not fully disapear
-          document.myScale = 0.2
+      if (document.myScale < 0.05){    // so web page does not fully disapear
+          document.myScale = 0.05
       } 
       document.getElementById('myDiv1').style.webkitTransform = 'scale('+document.myScale+')';
     }  
@@ -95,35 +68,41 @@ document.getElementById('myDiv1').style.WebkitTransformOrigin = '0px 0px';
 
 
 
-}  // end window.load
 
 
-function onDeviceReady() {
-     document.getElementById('myFeedbackDiv').innerHTML ='Your device is now ready to use';  
+
+
+
+
 }
-
-
 </script>
-
-<title>pgb-jer</title>
 
 </head>
 
-<font style="font-size:30px">
+<body id="myBodyId" >
+<div id="myDiv1">
+
+
+<input type=button id="myZoomButton" value="Presently Zoom Larger Only" style="font-size:30px" onclick="{
+if (document.myOnlyZoomLarger == 'true'){
+   document.myOnlyZoomLarger = 'false'
+   document.all.myZoomButton.value = 'Presently Zoom and Shrink'
+   } else {
+      document.myOnlyZoomLarger = 'true'
+      document.all.myZoomButton.value = 'Presently Zoom Larger Only'   
+   }
+   
+   
+}"><br><br>
 
 
 
 
+<h1></h1>j00-all-repos-pgb-helloworld  </h1><br><br>
 
 
 
-
-
-
-
-
-
-
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 
 <input type=button style="font-size:15px" value="A link to my main site Rocksetta.com " onclick="{location='http://www.rocksetta.com'}">
 
@@ -131,36 +110,29 @@ function onDeviceReady() {
 <table border=2 width=1000>
 <tr><td >
 <ol>
-<li><input type=button style="font-size:25px" value="j03-easy-index.html-pgb-helloworld" onclick="{location='j03-easy-index.html-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j03-easy-index.html-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:25px" value="j05-links-images-youtube-pgb-helloworld" onclick="{location='j05-links-images-youtube-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j05-links-images-youtube-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:25px" value="j05-plugin-genenal-pgb-helloworld/index.html" onclick="{location='j05-plugin-genenal-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j05-plugin-genenal-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:25px" value="j11-table-list-pgb-helloworld" onclick="{location='j11-table-list-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j11-table-list-pgb-helloworld'}"><br><br>
-
-
-
-<li><input type=button style="font-size:25px" value="j18-game-base-pgb-helloworld" onclick="{location='j18-game-base-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j18-game-base-pgb-helloworld'}"><br><br>
-
-
-
-<li><input type=button style="font-size:25px" value="j19-forms-pgb-helloworld" onclick="{location='j19-forms-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j19-forms-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:25px" value="j20-file-pgb-helloworld" onclick="{location='j20-file-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j20-file-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:25px" value="j21-camera-pgb-helloworld" onclick="{location='j21-camera-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j21-camera-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:25px" value="j22-accelerometer-and-device-pgb-helloworld" onclick="{location='j22-accelerometer-and-device-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j22-accelerometer-and-device-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:25px" value="j23-cssAnimations-pgb-helloworld" onclick="{location='j23-cssAnimations-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j23-cssAnimations-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:25px" value="j23-sound-pgb-helloworld" onclick="{location='j23-sound-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j23-sound-pgb-helloworld'}"><br><br>
-
-<li><input type=button style="font-size:25px" value="j24-geolocation-pgb-helloworld" onclick="{location='j24-geolocation-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j24-geolocation-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:25px" value="j31-inappbrowser-pgb-helloworld" onclick="{location='j31-inappbrowser-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j31-inappbrowser-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:25px" value="j40-jsc3d-basic-pgb-helloworld" onclick="{location='j40-jsc3d-basic-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j40-jsc3d-basic-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:25px" value="j41-jsc3d-advanced-pgb-helloworld" onclick="{location='j41-jsc3d-advanced-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j41-jsc3d-advanced-pgb-helloworld'}"><br><br>
-<li><input type=button style="font-size:25px" value="j90-AJAX-pgb-helloworld" onclick="{location='j90-AJAX-pgb-helloworld-index.html'}"><input type=button style="font-size:25px" value="on Github" onclick="{location='https://github.com/hpssjellis/j90-AJAX-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j03-easy-index.html-pgb-helloworld" onclick="{location='j03-easy-index.html-pgb-helloworld2/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j03-easy-index.html-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j05-links-images-youtube-pgb-helloworld" onclick="{location='j05-links-images-youtube-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j05-links-images-youtube-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j05-plugin-genenal-pgb-helloworld/index.html" onclick="{location='j05-plugin-genenal-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j05-plugin-genenal-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j11-table-list-pgb-helloworld" onclick="{location='j11-table-list-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j11-table-list-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j19-forms-pgb-helloworld" onclick="{location='j19-forms-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j19-forms-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j20-file-pgb-helloworld" onclick="{location='j20-file-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j20-file-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j21-camera-pgb-helloworld" onclick="{location='j21-camera-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j21-camera-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j22-accelerometer-and-device-pgb-helloworld" onclick="{location='j22-accelerometer-and-device-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j22-accelerometer-and-device-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j23-cssAnimations-pgb-helloworld" onclick="{location='j23-cssAnimations-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j23-cssAnimations-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j23-sound-pgb-helloworld" onclick="{location='j23-sound-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j23-sound-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j23-splashScreen-pgb-helloworld" onclick="{location='j23-splashScreen-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j23-splashScreen-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j24-geolocation-pgb-helloworld" onclick="{location='j24-geolocation-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j24-geolocation-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j31-inappbrowser-pgb-helloworld" onclick="{location='j31-inappbrowser-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j31-inappbrowser-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j40-jsc3d-basic-pgb-helloworld" onclick="{location='j40-jsc3d-basic-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j40-jsc3d-basic-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j41-jsc3d-advanced-pgb-helloworld" onclick="{location='j41-jsc3d-advanced-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j41-jsc3d-advanced-pgb-helloworld'}"><br><br>
+<li><input type=button style="font-size:15px" value="j90-AJAX-pgb-helloworld" onclick="{location='j90-AJAX-pgb-helloworld/index.html'}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/j90-AJAX-pgb-helloworld'}"><br><br>
 
 
 
 
 
-<li><input type=button style="font-size:25px" value="" onclick="{location=''}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/'}"><br><br>
-<li><input type=button style="font-size:25px" value="" onclick="{location=''}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/'}"><br><br>
+<li><input type=button style="font-size:15px" value="" onclick="{location=''}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/'}"><br><br>
+<li><input type=button style="font-size:15px" value="" onclick="{location=''}"><input type=button style="font-size:15px" value="on Github" onclick="{location='https://github.com/hpssjellis/'}"><br><br>
 <br><br>
   
   </td></tr>
@@ -168,11 +140,55 @@ function onDeviceReady() {
 
 
 </div>
-
-
-</font>
 </body>    
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
