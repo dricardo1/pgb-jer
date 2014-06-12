@@ -1,10 +1,10 @@
 {
-    "name": "phonegap-app-heroku",
-    "description": "Template for deploying a hosted app to Heroku.",
+    "name": "pgb-jer",
+    "description": "Everything but the kitchen sink Phonegap Build Example Hello World Program.",
     "version": "0.0.1",
     "repository": {
         "type": "git",
-        "url": "git@heroku.com:phonegap-app-heroku.git"
+        "url": "git@heroku.com:pgb-jer.git"
     },
     "private": "true",
     "scripts": {
@@ -21,6 +21,11 @@
     "devDependencies": {
     },
     "contributors": [
+        {
+            "name": "Jeremy Ellis",
+            "email": "infor@rocksetta.com",
+            "url": "http://rocksetta.com"
+        }, 
         {
             "name": "Michael Brooks",
             "email": "michael@michaelbrooks.ca",
