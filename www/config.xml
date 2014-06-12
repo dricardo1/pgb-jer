@@ -3,7 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.yourwebsite.yourUniqueName"  
+        id        = "com.yourwebsite.yourUniqueName2"  
         version   = "0.0.7">
 
 
@@ -11,7 +11,7 @@
 
 
 
-    <name>j00-everything-but-the-kitchen-sink-pgb-helloworld</name>
+    <name>pgb-jer</name>
 
 
   <!--  <preference name="permissions"                value="none"/>  -->
@@ -43,7 +43,8 @@
     <gap:plugin name="org.apache.cordova.geolocation"  />
     <gap:plugin name="org.apache.cordova.globalization" />
 
-    <gap:plugin name="org.apache.cordova.inappbrowser"  />    <gap:plugin name="org.apache.cordova.core.media" /> 
+    <gap:plugin name="org.apache.cordova.inappbrowser"  />        
+    <gap:plugin name="org.apache.cordova.core.media" /> 
     <gap:plugin name="org.apache.cordova.network-information" />
 
     <gap:plugin name="org.apache.cordova.dialogs" />
