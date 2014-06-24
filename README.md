@@ -5,7 +5,7 @@
 1.         Login http://www.nitrous.io
 2.         New Box (only one free box so terminate any old boxes)
 3.         Select Node, give your project a name such as MYNAME
-4.         Start with a github repo such as https://github.com/hpssjellis/pgb-jer/new/master
+4.         Start with a github repo such as https://github.com/hpssjellis/pgb-jer.git
 5.         Terminal
 6.         npm install connect
 7.         npm install connect-phonegap
@@ -13,6 +13,6 @@
 9.         cd workspace
 10.        cd myNAME
 11.        node nitrous.js
-12.        preview record URL to enter into the Phonegap Developer App.
+12.        Click preview. Then record the URL to enter into the Phonegap Developer App.
 
 
